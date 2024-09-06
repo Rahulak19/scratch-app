@@ -1,0 +1,19 @@
+.side__main {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  height: 95vh;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
+.side__head {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.action__block {
+  margin-top: 1rem;
+}
+.action__items {
+  // margin-bottom: 1rem;
+  cursor: pointer;
+}

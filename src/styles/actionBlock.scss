@@ -1,0 +1,53 @@
+/* ActionBlock.css */
+
+.block {
+  margin-bottom: 10px;
+}
+
+.block-content {
+  display: flex;
+  align-items: center;
+}
+
+.block-type {
+  padding: 5px;
+  background-color: #4c97ff;
+  color: white;
+}
+
+.block-type.goto-x {
+  border-radius: 5px 0 0 5px;
+}
+
+.block-type.goto-y {
+  border-radius: 0;
+}
+
+.block-type.goto-coordinates {
+  border-radius: 0 5px 5px 0;
+}
+
+.block-type.other {
+  border-radius: 5px 0 0 5px;
+}
+
+.block-type.repeat {
+  border-radius: 6px;
+}
+
+.block-input {
+  width: 50px;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  height: 24px;
+}
+
+.block-type-steps {
+  border-radius: 0 5px 5px 0;
+}
+
+.block-type-degrees {
+  border-radius: 0 5px 5px 0;
+}

@@ -1,0 +1,80 @@
+.display__area {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.display__area__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.display__canvas {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  width: 100%;
+  border: 2px solid black;
+}
+.display__sprite {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 100%;
+}
+.display__canvas {
+  // width: 100%;
+  // height: 100%;
+  position: relative; // Ensures proper alignment of children elements
+}
+
+.animate-container {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.play__btn {
+  display: flex;
+  justify-content: end;
+  padding: 10px 15px;
+}
+.play__button {
+  border: none;
+  background-color: rgb(22, 193, 22);
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rst__button {
+  border: none;
+  background-color: rgb(41, 105, 170);
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.display__sprite {
+  display: flex;
+}
+.select__sprit__header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}

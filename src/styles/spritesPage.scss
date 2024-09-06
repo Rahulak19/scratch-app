@@ -1,0 +1,57 @@
+.sprites__main {
+  display: flex;
+}
+
+.sprite__tags {
+  margin-top: 3rem;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+.sprite__tg__1 {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border: 3px solid #4c97ff;
+  border-radius: 8px;
+  padding: 10px;
+}
+.sprite__tg__2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 3px solid #4c97ff;
+  border-radius: 8px;
+  padding: 10px;
+}
+.add__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #4c97ff;
+}
+.ball__sp__img {
+  height: 50px;
+  width: 50px;
+}
+.close__btn__x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2px 4px;
+
+  border: none;
+  background-color: rgb(249, 59, 59);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.close__btn__x__span {
+  transform: rotate(-0.25turn);
+}
