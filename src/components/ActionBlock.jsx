@@ -1,8 +1,7 @@
 import React from "react";
-import "../styles/actionBlock.scss"; // Import the CSS file
+import "../styles/actionBlock.scss";
 
 function ActionBlock({ block, onUpdate }) {
-  // Handler to update the value of a specific field in the block
   const handleInputChange = (field, value) => {
     onUpdate({ ...block, [field]: value });
   };

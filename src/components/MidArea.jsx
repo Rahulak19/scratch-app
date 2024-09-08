@@ -12,15 +12,13 @@ export default function MidArea() {
     const data = e.dataTransfer.getData("text/plain");
     const item = JSON.parse(data);
 
-    // Find the action that matches selectedAction, or create a new one
     const updatedActions = actions.map((action) => {
       if (action.actionNo === selectedAction) {
-        return { ...action, data: [...action.data, item] }; // Add new item to data array
+        return { ...action, data: [...action.data, item] };
       }
-      return action; // Keep other actions unchanged
+      return action;
     });
 
-    // If no existing action matches selectedAction, create a new one
     if (!updatedActions.some((action) => action.actionNo === selectedAction)) {
       updatedActions.push({ actionNo: selectedAction, data: [item] });
     }
@@ -30,12 +28,12 @@ export default function MidArea() {
   };
 
   const handleDragOver = (e) => {
-    e.preventDefault(); // Necessary to allow drop
+    e.preventDefault();
   };
 
-  const handleRemove = (actionIndex, itemIndex) => {
-    const updatedActions = actions.map((action, idx) => {
-      if (idx === actionIndex && action.actionNo === selectedAction) {
+  const handleRemove = (actionNo, itemIndex) => {
+    const updatedActions = actions.map((action) => {
+      if (action.actionNo === actionNo) {
         return {
           ...action,
           data: action.data.filter((_, i) => i !== itemIndex),
@@ -47,9 +45,16 @@ export default function MidArea() {
   };
 
   const handleUpdate = (updatedBlock) => {
-    setActions((prevBlocks) =>
-      prevBlocks.map((block) =>
-        block.id === updatedBlock.id ? updatedBlock : block
+    setActions((prevActions) =>
+      prevActions.map((action) =>
+        action.actionNo === selectedAction
+          ? {
+              ...action,
+              data: action.data.map((block) =>
+                block.id === updatedBlock.id ? updatedBlock : block
+              ),
+            }
+          : action
       )
     );
   };
@@ -75,7 +80,7 @@ export default function MidArea() {
       <ul className="mid__area__list">
         {actions
           .filter((action) => action.actionNo === selectedAction)
-          .map((action, actionIndex) =>
+          .map((action) =>
             action.data.map((item, itemIndex) => (
               <div className="action__items__out" key={itemIndex}>
                 <div className="action__items">
@@ -83,7 +88,7 @@ export default function MidArea() {
                 </div>
                 <button
                   className="close__btn"
-                  onClick={() => handleRemove(actionIndex, itemIndex)}
+                  onClick={() => handleRemove(selectedAction, itemIndex)}
                 >
                   X
                 </button>
